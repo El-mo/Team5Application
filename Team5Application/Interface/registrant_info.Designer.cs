@@ -205,14 +205,14 @@
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(6, 13);
+            this.listBox2.Location = new System.Drawing.Point(6, 19);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(188, 95);
             this.listBox2.TabIndex = 26;
             // 
             // btnAddAdult
             // 
-            this.btnAddAdult.Location = new System.Drawing.Point(6, 109);
+            this.btnAddAdult.Location = new System.Drawing.Point(6, 115);
             this.btnAddAdult.Name = "btnAddAdult";
             this.btnAddAdult.Size = new System.Drawing.Size(188, 33);
             this.btnAddAdult.TabIndex = 25;
