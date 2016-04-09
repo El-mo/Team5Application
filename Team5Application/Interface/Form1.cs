@@ -38,6 +38,16 @@ namespace Team5Application
             
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Program.formsOpen++;
+        }
 
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Program.formsOpen--;
+            if (Program.formsOpen == 0)
+                Application.Exit();
+        }
     }
 }
