@@ -19,7 +19,7 @@ namespace Team5Application
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //this.Hide();
+            this.Hide();
             Interface.registrant_info info = new Interface.registrant_info();
             info.Show();
         }
@@ -32,6 +32,11 @@ namespace Team5Application
         }
 
         private void Form1_VisibleChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Form1_Leave(object sender, EventArgs e)
         {
             
         }
