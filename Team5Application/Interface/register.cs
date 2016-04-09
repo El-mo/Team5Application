@@ -33,7 +33,7 @@ namespace Team5Application.Interface
             }
             catch(System.Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
             }
 
             if (regHelper == null)
@@ -59,7 +59,6 @@ namespace Team5Application.Interface
 
             this.Hide();
             Interface.registrant_info info = new registrant_info();
-            info.regHelper = regHelper;
             info.Show();
             this.Close();
         }
@@ -75,5 +74,7 @@ namespace Team5Application.Interface
         {
             Program.formsOpen++;
         }
+
+        
     }
 }

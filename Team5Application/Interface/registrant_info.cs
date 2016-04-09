@@ -13,7 +13,7 @@ namespace Team5Application.Interface
 {
     public partial class registrant_info : Form
     {
-        public RegisterController regHelper;
+        public static RegisterController regHelper;
         public registrant_info()
         {
             InitializeComponent();
@@ -56,6 +56,7 @@ namespace Team5Application.Interface
         {
             Interface.add_adult addAdult = new add_adult();
             addAdult.ShowDialog();
+            
         }
 
         private void registrant_info_FormClosed(object sender, FormClosedEventArgs e)
@@ -63,6 +64,21 @@ namespace Team5Application.Interface
             Program.formsOpen--;
             if (Program.formsOpen == 0)
                 Application.Exit();
+        }
+
+        private void updateAdultList()
+        {
+            
+        }
+        private void updateKidList()
+        {
+            
+        }
+
+        private void listBox2_VisibleChanged(object sender, EventArgs e)
+        {
+            updateAdultList();
+            updateKidList();
         }
     }
 }

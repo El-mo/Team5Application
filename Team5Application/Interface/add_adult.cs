@@ -16,5 +16,14 @@ namespace Team5Application.Interface
         {
             InitializeComponent();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if (this.group.Text.Equals("Adult"))
+                registrant_info.regHelper.addAdult(this.tbFName.Text, this.tbLName.Text, Data_Models.Registrant.groupType.Adult);
+            else
+                registrant_info.regHelper.addAdult(this.tbFName.Text, this.tbLName.Text, Data_Models.Registrant.groupType.Professional);
+            
+        }
     }
 }

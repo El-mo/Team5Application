@@ -12,6 +12,7 @@ namespace Team5Application.Interface
 {
     public partial class add_child : Form
     {
+        public Business_Logic.RegisterController regHelper;
         public add_child()
         {
             InitializeComponent();

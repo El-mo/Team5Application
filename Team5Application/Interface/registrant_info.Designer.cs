@@ -209,6 +209,7 @@
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(188, 95);
             this.listBox2.TabIndex = 26;
+            this.listBox2.VisibleChanged += new System.EventHandler(this.listBox2_VisibleChanged);
             // 
             // btnAddAdult
             // 

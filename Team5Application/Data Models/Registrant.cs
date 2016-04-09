@@ -8,6 +8,11 @@ namespace Team5Application.Data_Models
 {
     public class Registrant
     {
+        public Registrant()
+        {
+            this.adults = new List<Adult>();
+            this.children = new List<Child>();
+        }
         public int registrantID { get; set; }
         public enum groupType
         {

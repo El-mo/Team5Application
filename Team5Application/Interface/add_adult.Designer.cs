@@ -34,7 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.group = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // tbLName
@@ -86,21 +86,25 @@
             this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // comboBox1
+            // group
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(15, 106);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(257, 21);
-            this.comboBox1.TabIndex = 13;
+            this.group.FormattingEnabled = true;
+            this.group.Items.AddRange(new object[] {
+            "Adult",
+            "Professional"});
+            this.group.Location = new System.Drawing.Point(15, 106);
+            this.group.Name = "group";
+            this.group.Size = new System.Drawing.Size(257, 21);
+            this.group.TabIndex = 13;
             // 
             // add_adult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 165);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.group);
             this.Controls.Add(this.tbLName);
             this.Controls.Add(this.tbFName);
             this.Controls.Add(this.label3);
@@ -126,6 +130,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox group;
     }
 }
