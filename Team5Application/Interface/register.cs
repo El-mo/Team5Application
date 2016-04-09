@@ -21,6 +21,30 @@ namespace Team5Application.Interface
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            try
+            {
+                DataRow newRow = this.goFlyAKiteDataSet1.Tables["Users"].NewRow();
+                newRow["Username"] = tbUsername.Text;
+                newRow["Password"] = tbPassword.Text;
+                this.goFlyAKiteDataSet1.Tables["main"].Rows.Add(newRow);
+                this.goFlyAKiteDataSet1.AcceptChanges();
+                this.bindingSource1.EndEdit();
+            }
+            catch(System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+
+
+
+
+
+
+
+
             String fname = this.fname.Text;
             String lname = this.lname.Text;
             String group = this.group.Text;
