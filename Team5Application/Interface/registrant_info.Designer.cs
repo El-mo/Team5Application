@@ -60,6 +60,7 @@
             this.btnAddChild.TabIndex = 18;
             this.btnAddChild.Text = "Add Child";
             this.btnAddChild.UseVisualStyleBackColor = true;
+            this.btnAddChild.Click += new System.EventHandler(this.btnAddChild_Click);
             // 
             // listBox1
             // 
@@ -204,19 +205,20 @@
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(6, 13);
+            this.listBox2.Location = new System.Drawing.Point(6, 19);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(188, 95);
             this.listBox2.TabIndex = 26;
             // 
             // btnAddAdult
             // 
-            this.btnAddAdult.Location = new System.Drawing.Point(6, 109);
+            this.btnAddAdult.Location = new System.Drawing.Point(6, 115);
             this.btnAddAdult.Name = "btnAddAdult";
             this.btnAddAdult.Size = new System.Drawing.Size(188, 33);
             this.btnAddAdult.TabIndex = 25;
             this.btnAddAdult.Text = "Add Adult";
             this.btnAddAdult.UseVisualStyleBackColor = true;
+            this.btnAddAdult.Click += new System.EventHandler(this.btnAddAdult_Click);
             // 
             // current_owe
             // 
@@ -260,7 +262,9 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
             this.Name = "registrant_info";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit Registrant Information";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.registrant_info_FormClosed);
             this.Load += new System.EventHandler(this.registrant_info_Load);

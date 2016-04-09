@@ -256,7 +256,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "register";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.register_FormClosed);
             this.Load += new System.EventHandler(this.register_Load);

@@ -41,6 +41,18 @@ namespace Team5Application.Interface
 
         }
 
+        private void btnAddChild_Click(object sender, EventArgs e)
+        {
+            Interface.add_child addChild = new add_child();
+            addChild.ShowDialog();
+        }
+
+        private void btnAddAdult_Click(object sender, EventArgs e)
+        {
+            Interface.add_adult addAdult = new add_adult();
+            addAdult.ShowDialog();
+        }
+
         private void registrant_info_FormClosed(object sender, FormClosedEventArgs e)
         {
             Program.formsOpen--;
