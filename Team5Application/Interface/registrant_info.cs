@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Team5Application.Business_Logic;
 
 namespace Team5Application.Interface
 {
     public partial class registrant_info : Form
     {
+        public RegisterController regHelper;
         public registrant_info()
         {
             InitializeComponent();
@@ -22,6 +24,15 @@ namespace Team5Application.Interface
             //this.Hide();
             Interface.register editinfo = new register();
             editinfo.Show();
+        }
+
+        private void registrant_info_Load(object sender, EventArgs e)
+        {
+            //If first time in system
+            if (regHelper == null)
+            {
+                regHelper = new RegisterController();
+            }
         }
 
         private void current_owe_Click(object sender, EventArgs e)

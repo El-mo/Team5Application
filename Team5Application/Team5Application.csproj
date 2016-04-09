@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Business Logic\Register.cs" />
+    <Compile Include="Business Logic\RegisterController.cs" />
     <Compile Include="Data Models\Adult.cs" />
     <Compile Include="Data Models\Child.cs" />
     <Compile Include="Data Models\Registrant.cs" />
@@ -103,9 +103,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Business Logic\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Interface\kitesslideshow.gif" />
   </ItemGroup>

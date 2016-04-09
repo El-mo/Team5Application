@@ -33,6 +33,15 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
             this.waivercb = new System.Windows.Forms.CheckBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.editMyInfo = new System.Windows.Forms.LinkLabel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.waivercb = new System.Windows.Forms.CheckBox();
             this.lblGroup = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblPhone = new System.Windows.Forms.Label();
@@ -181,6 +190,97 @@
             // 
             // groupBox2
             // 
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(253, 127);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(232, 32);
+            this.label11.TabIndex = 39;
+            this.label11.Text = "\"I agree to release all harm for event organizers and the City of Chicago.\"";
+            // 
+            // waivercb
+            // 
+            this.waivercb.AutoSize = true;
+            this.waivercb.Enabled = false;
+            this.waivercb.Location = new System.Drawing.Point(232, 128);
+            this.waivercb.Name = "waivercb";
+            this.waivercb.Size = new System.Drawing.Size(15, 14);
+            this.waivercb.TabIndex = 38;
+            this.waivercb.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(6, 127);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(50, 18);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Group";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(6, 109);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(45, 18);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Email";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(6, 91);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(51, 18);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Phone";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(6, 73);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 18);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Address";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 55);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 18);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Last Name";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 18);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "First Name";
+            // 
+            // editMyInfo
+            // 
+            this.editMyInfo.AutoSize = true;
+            this.editMyInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editMyInfo.Location = new System.Drawing.Point(366, 15);
+            this.editMyInfo.Name = "editMyInfo";
+            this.editMyInfo.Size = new System.Drawing.Size(120, 16);
+            this.editMyInfo.TabIndex = 0;
+            this.editMyInfo.TabStop = true;
+            this.editMyInfo.Text = "Edit My Information";
+            this.editMyInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.editMyInfo_LinkClicked);
+            // 
+            // groupBox2
+            // 
             this.groupBox2.Controls.Add(this.listBox1);
             this.groupBox2.Controls.Add(this.btnAddChild);
             this.groupBox2.Location = new System.Drawing.Point(36, 191);
@@ -262,6 +362,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "registrant_info";
             this.Text = "Edit Registrant Information";
+            this.Load += new System.EventHandler(this.registrant_info_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
