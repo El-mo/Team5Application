@@ -33,22 +33,22 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
             this.waivercb = new System.Windows.Forms.CheckBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            //this.label6 = new System.Windows.Forms.Label();
+            //this.label5 = new System.Windows.Forms.Label();
+            //this.label4 = new System.Windows.Forms.Label();
+            //this.label3 = new System.Windows.Forms.Label();
+            //this.label2 = new System.Windows.Forms.Label();
+            //this.label1 = new System.Windows.Forms.Label();
             this.editMyInfo = new System.Windows.Forms.LinkLabel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.waivercb = new System.Windows.Forms.CheckBox();
+            //this.label11 = new System.Windows.Forms.Label();
+            //this.waivercb = new System.Windows.Forms.CheckBox();
             this.lblGroup = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblPhone = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblLName = new System.Windows.Forms.Label();
             this.lblFName = new System.Windows.Forms.Label();
-            this.editMyInfo = new System.Windows.Forms.LinkLabel();
+            //this.editMyInfo = new System.Windows.Forms.LinkLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
@@ -186,7 +186,7 @@
             this.editMyInfo.TabIndex = 0;
             this.editMyInfo.TabStop = true;
             this.editMyInfo.Text = "Edit My Information";
-            this.editMyInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.editMyInfo_LinkClicked);
+            //this.editMyInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.editMyInfo_LinkClicked);
             // 
             // groupBox2
             // 
@@ -209,53 +209,53 @@
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 127);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 18);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Group";
+            //this.label6.AutoSize = true;
+            //this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.label6.Location = new System.Drawing.Point(6, 127);
+            //this.label6.Name = "label6";
+            //this.label6.Size = new System.Drawing.Size(50, 18);
+            //this.label6.TabIndex = 6;
+            //this.label6.Text = "Group";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 109);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 18);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Email";
+            //this.label5.AutoSize = true;
+            //this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.label5.Location = new System.Drawing.Point(6, 109);
+            //this.label5.Name = "label5";
+            //this.label5.Size = new System.Drawing.Size(45, 18);
+            //this.label5.TabIndex = 5;
+            //this.label5.Text = "Email";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 91);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 18);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Phone";
+            //this.label4.AutoSize = true;
+            //this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.label4.Location = new System.Drawing.Point(6, 91);
+            //this.label4.Name = "label4";
+            //this.label4.Size = new System.Drawing.Size(51, 18);
+            //this.label4.TabIndex = 4;
+            //this.label4.Text = "Phone";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 73);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 18);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Address";
+            //this.label3.AutoSize = true;
+            //this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.label3.Location = new System.Drawing.Point(6, 73);
+            //this.label3.Name = "label3";
+            //this.label3.Size = new System.Drawing.Size(62, 18);
+            //this.label3.TabIndex = 3;
+            //this.label3.Text = "Address";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 55);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 18);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Last Name";
+            //this.label2.AutoSize = true;
+            //this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.label2.Location = new System.Drawing.Point(6, 55);
+            //this.label2.Name = "label2";
+            //this.label2.Size = new System.Drawing.Size(80, 18);
+            //this.label2.TabIndex = 2;
+            //this.label2.Text = "Last Name";
             // 
             // label1
             // 

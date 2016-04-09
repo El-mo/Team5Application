@@ -21,18 +21,18 @@ namespace Team5Application.Interface
 
         private void editMyInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            //this.Hide();
+            this.Hide();
             Interface.register editinfo = new register();
             editinfo.Show();
         }
 
         private void registrant_info_Load(object sender, EventArgs e)
         {
-            //If first time in system
-            if (regHelper == null)
-            {
-                regHelper = new RegisterController();
-            }
+            ////If first time in system
+            //if (regHelper == null)
+            //{
+            //    regHelper = new RegisterController();
+            //}
         }
 
         private void current_owe_Click(object sender, EventArgs e)

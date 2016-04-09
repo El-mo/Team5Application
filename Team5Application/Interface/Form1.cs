@@ -31,6 +31,9 @@ namespace Team5Application
             register.Show();
         }
 
-       
+        private void Form1_VisibleChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
