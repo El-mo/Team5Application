@@ -29,11 +29,16 @@ namespace Team5Application.Interface
         private void registrant_info_Load(object sender, EventArgs e)
         {
             Program.formsOpen++;
-            ////If first time in system
-            //if (regHelper == null)
-            //{
-            //    regHelper = new RegisterController();
-            //}
+            if (regHelper != null)
+            {
+                this.lblFName.Text = regHelper.registrant.firstName;
+                this.lblLName.Text = regHelper.registrant.lastName;
+                this.lblGroup.Text = regHelper.registrant.group;
+                this.lblPhone.Text = regHelper.registrant.phone;
+                this.lblEmail.Text = regHelper.registrant.email;
+                this.lblAddress.Text = regHelper.RegAddress();
+                this.lblAmtOwed.Text = "$"+regHelper.registrant.currentPrice.ToString();
+            }
         }
 
         private void current_owe_Click(object sender, EventArgs e)

@@ -32,7 +32,7 @@ namespace Team5Application.Data_Models
 
         public List<Child> children { get; set; }
         public List<Adult> adults { get; set; }
-        public double currentPrice { get; set; }
+        public Double currentPrice { get; set; }
         
     }
 }
