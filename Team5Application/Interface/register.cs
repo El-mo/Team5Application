@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Team5Application.Business_Logic;
+using System.Data.OleDb;
 
 namespace Team5Application.Interface
 {
@@ -24,11 +25,29 @@ namespace Team5Application.Interface
 
             try
             {
-                DataRow newRow = this.goFlyAKiteDataSet1.Tables["Users"].NewRow();
-                newRow["Username"] = tbUsername.Text;
-                newRow["Password"] = tbPassword.Text;
-                this.goFlyAKiteDataSet1.Tables["main"].Rows.Add(newRow);
-                this.goFlyAKiteDataSet1.AcceptChanges();
+                OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=goFlyAKite.accdb;Persist Security Info=True");
+                OleDbCommand addCreds = new OleDbCommand("INSERT INTO Users (Username, Pass) VALUES (@Username, @Password)", conn);
+                addCreds.Parameters.AddWithValue("@Username", this.tbUsername.Text);
+                addCreds.Parameters.AddWithValue("@Password", this.tbPassword.Text);
+               
+             
+
+                OleDbCommand addInfo = new OleDbCommand("INSERT INTO Registrants (First_Name, Last_Name, Group, Street, City, State, Zip, Phone, Email) VALUES (@First_Name, @Last_Name, @Group, @Street, @City, @State, @Zip, @Phone, @Email)", conn);
+                addInfo.Parameters.AddWithValue("@First_Name", this.fname.Text);
+                addInfo.Parameters.AddWithValue("@Last_Name", this.lname.Text);
+                addInfo.Parameters.AddWithValue("@Group", this.group.Text);
+                addInfo.Parameters.AddWithValue("@Street", this.street.Text);
+                addInfo.Parameters.AddWithValue("@City", this.city.Text);
+                addInfo.Parameters.AddWithValue("@State", this.tbState.Text);
+                addInfo.Parameters.AddWithValue("@Zip", this.zip.Text);
+                addInfo.Parameters.AddWithValue("@Phone", this.phone.Text);
+                addInfo.Parameters.AddWithValue("@Email", this.email.Text);
+
+                conn.Open();
+                addCreds.ExecuteNonQuery();
+                addInfo.ExecuteNonQuery();
+                conn.Close();
+                this.Validate();
                 this.bindingSource1.EndEdit();
             }
             catch(System.Exception ex)
