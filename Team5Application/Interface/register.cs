@@ -54,32 +54,30 @@ namespace Team5Application.Interface
                 MessageBox.Show(ex.Message);
             }
 
-
-
-
-
-
-
-
-
-
+            if (regHelper == null)
+                regHelper = new RegisterController();
             String fname = this.fname.Text;
             String lname = this.lname.Text;
             String group = this.group.Text;
             String street = this.street.Text;
-            //String state = this.
+            String state = this.tbState.Text;
             String city = this.city.Text;
             String zip = this.zip.Text;
             String phone = this.phone.Text;
             String email = this.email.Text;
             if (group.Equals("Adult"))
-                regHelper.createMainRegistrant(fname, lname, Data_Models.Registrant.groupType.Adult, street, city, "Adult", zip, phone, email);
+                regHelper.createMainRegistrant(fname, lname, Data_Models.Registrant.groupType.Adult, street, city, state, zip, phone, email);
             else
-                regHelper.createMainRegistrant(fname, lname, Data_Models.Registrant.groupType.Professional, street, city, "Professional", zip, phone, email);
+                regHelper.createMainRegistrant(fname, lname, Data_Models.Registrant.groupType.Professional, street, city, state, zip, phone, email);
             regHelper.user = new Data_Models.RegistrantUser();
+            regHelper.user.username = this.tbUsername.Text;
+            regHelper.user.password = this.tbPassword.Text;
             
+
+
             this.Hide();
             Interface.registrant_info info = new registrant_info();
+            info.regHelper = regHelper;
             info.Show();
             this.Close();
         }

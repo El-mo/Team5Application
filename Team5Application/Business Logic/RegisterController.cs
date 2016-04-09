@@ -57,5 +57,13 @@ namespace Team5Application.Business_Logic
             return true;
         }
 
+        public String RegAddress()
+        {
+            String address = "";
+            address += registrant.street +"\n";
+            address += registrant.city + ", " + registrant.state + " " + registrant.zip;
+            return address;
+        }
+
     }
 }
