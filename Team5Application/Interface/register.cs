@@ -12,6 +12,7 @@ namespace Team5Application.Interface
 {
     public partial class register : Form
     {
+        public Form1 main;
         public register()
         {
             InitializeComponent();
@@ -22,7 +23,19 @@ namespace Team5Application.Interface
             this.Hide();
             Interface.registrant_info info = new registrant_info();
             info.Show();
+            this.Close();
         }
 
+        private void register_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Program.formsOpen--;
+            if (Program.formsOpen == 0)
+                Application.Exit();
+        }
+
+        private void register_Load(object sender, EventArgs e)
+        {
+            Program.formsOpen++;
+        }
     }
 }

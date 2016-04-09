@@ -28,6 +28,7 @@ namespace Team5Application.Interface
 
         private void registrant_info_Load(object sender, EventArgs e)
         {
+            Program.formsOpen++;
             ////If first time in system
             //if (regHelper == null)
             //{
@@ -38,6 +39,13 @@ namespace Team5Application.Interface
         private void current_owe_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void registrant_info_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Program.formsOpen--;
+            if (Program.formsOpen == 0)
+                Application.Exit();
         }
     }
 }
