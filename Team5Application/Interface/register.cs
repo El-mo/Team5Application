@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Team5Application.Business_Logic;
+using System.Data.OleDb;
 
 namespace Team5Application.Interface
 {
@@ -24,12 +25,29 @@ namespace Team5Application.Interface
 
             try
             {
-                DataRow newRow = this.goFlyAKiteDataSet1.Tables["Users"].NewRow();
-                newRow["Username"] = tbUsername.Text;
-                newRow["Password"] = tbPassword.Text;
-                this.goFlyAKiteDataSet1.Tables["main"].Rows.Add(newRow);
-                this.goFlyAKiteDataSet1.AcceptChanges();
-                this.bindingSource1.EndEdit();
+                OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=goFlyAKite.accdb;Persist Security Info=True");
+                OleDbCommand addCreds = new OleDbCommand("INSERT INTO Users (Username, Password) VALUES (@Username, @Password)", conn);
+                addCreds.Parameters.AddWithValue("@Username", this.tbUsername.Text);
+                addCreds.Parameters.AddWithValue("@Password", this.tbPassword.Text);
+               
+                conn.Open();
+                addCreds.ExecuteNonQuery();
+                conn.Close();
+
+                OleDbCommand addInfo = new OleDbCommand("INSERT INTO Registrants (First_Name, Last_Name, Group, Street, City, State, Zip, Phone, Email) VALUES (@First_Name, @Last_Name, @Group,@Street, @City, @State, @Zip, @Phone, @Email)", conn);
+                addCreds.Parameters.AddWithValue("@First_Name", this.fname.Text);
+                addCreds.Parameters.AddWithValue("@Last_Name", this.lname.Text);
+                addCreds.Parameters.AddWithValue("@Group", this.group.Text);
+                addCreds.Parameters.AddWithValue("@Street", this.street.Text);
+                addCreds.Parameters.AddWithValue("@City", this.city.Text);
+                addCreds.Parameters.AddWithValue("@State", this.tbState.Text);
+                addCreds.Parameters.AddWithValue("@Zip", this.zip.Text);
+                addCreds.Parameters.AddWithValue("@Phone", this.phone.Text);
+                addCreds.Parameters.AddWithValue("@Email", this.email.Text);
+
+                conn.Open();
+                addCreds.ExecuteNonQuery();
+                conn.Close();
             }
             catch(System.Exception ex)
             {
@@ -55,9 +73,9 @@ namespace Team5Application.Interface
             String phone = this.phone.Text;
             String email = this.email.Text;
             if (group.Equals("Adult"))
-                regHelper.createMainRegistrant(fname, lname, Data_Models.Registrant.groupType.Adult, street, city, "", zip, phone, email);
+                regHelper.createMainRegistrant(fname, lname, Data_Models.Registrant.groupType.Adult, street, city, "Adult", zip, phone, email);
             else
-                regHelper.createMainRegistrant(fname, lname, Data_Models.Registrant.groupType.Professional, street, city, "", zip, phone, email);
+                regHelper.createMainRegistrant(fname, lname, Data_Models.Registrant.groupType.Professional, street, city, "Professional", zip, phone, email);
             regHelper.user = new Data_Models.RegistrantUser();
             
             this.Hide();
