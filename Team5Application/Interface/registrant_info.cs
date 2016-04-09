@@ -23,5 +23,10 @@ namespace Team5Application.Interface
             Interface.register editinfo = new register();
             editinfo.Show();
         }
+
+        private void current_owe_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

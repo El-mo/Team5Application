@@ -24,9 +24,5 @@ namespace Team5Application.Interface
             info.Show();
         }
 
-        private void register_Load(object sender, EventArgs e)
-        {
-            
-        }
     }
 }
