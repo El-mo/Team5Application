@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Team5Application.Data_Models
 {
-    class Group
+    public class RegistrantUser
     {
+        public String username { get; set; }
+        public String password { get; set; }
+        public int userID { get; set; }
     }
 }
