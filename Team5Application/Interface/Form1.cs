@@ -16,5 +16,21 @@ namespace Team5Application
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            //this.Hide();
+            Interface.registrant_info info = new Interface.registrant_info();
+            info.Show();
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Interface.register register = new Interface.register();
+            register.Show();
+        }
+
+       
     }
 }
