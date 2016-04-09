@@ -26,28 +26,29 @@ namespace Team5Application.Interface
             try
             {
                 OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=goFlyAKite.accdb;Persist Security Info=True");
-                OleDbCommand addCreds = new OleDbCommand("INSERT INTO Users (Username, Password) VALUES (@Username, @Password)", conn);
+                OleDbCommand addCreds = new OleDbCommand("INSERT INTO Users (Username, Pass) VALUES (@Username, @Password)", conn);
                 addCreds.Parameters.AddWithValue("@Username", this.tbUsername.Text);
                 addCreds.Parameters.AddWithValue("@Password", this.tbPassword.Text);
                
-                conn.Open();
-                addCreds.ExecuteNonQuery();
-                conn.Close();
+             
 
-                OleDbCommand addInfo = new OleDbCommand("INSERT INTO Registrants (First_Name, Last_Name, Group, Street, City, State, Zip, Phone, Email) VALUES (@First_Name, @Last_Name, @Group,@Street, @City, @State, @Zip, @Phone, @Email)", conn);
-                addCreds.Parameters.AddWithValue("@First_Name", this.fname.Text);
-                addCreds.Parameters.AddWithValue("@Last_Name", this.lname.Text);
-                addCreds.Parameters.AddWithValue("@Group", this.group.Text);
-                addCreds.Parameters.AddWithValue("@Street", this.street.Text);
-                addCreds.Parameters.AddWithValue("@City", this.city.Text);
-                addCreds.Parameters.AddWithValue("@State", this.tbState.Text);
-                addCreds.Parameters.AddWithValue("@Zip", this.zip.Text);
-                addCreds.Parameters.AddWithValue("@Phone", this.phone.Text);
-                addCreds.Parameters.AddWithValue("@Email", this.email.Text);
+                OleDbCommand addInfo = new OleDbCommand("INSERT INTO Registrants (First_Name, Last_Name, Group, Street, City, State, Zip, Phone, Email) VALUES (@First_Name, @Last_Name, @Group, @Street, @City, @State, @Zip, @Phone, @Email)", conn);
+                addInfo.Parameters.AddWithValue("@First_Name", this.fname.Text);
+                addInfo.Parameters.AddWithValue("@Last_Name", this.lname.Text);
+                addInfo.Parameters.AddWithValue("@Group", this.group.Text);
+                addInfo.Parameters.AddWithValue("@Street", this.street.Text);
+                addInfo.Parameters.AddWithValue("@City", this.city.Text);
+                addInfo.Parameters.AddWithValue("@State", this.tbState.Text);
+                addInfo.Parameters.AddWithValue("@Zip", this.zip.Text);
+                addInfo.Parameters.AddWithValue("@Phone", this.phone.Text);
+                addInfo.Parameters.AddWithValue("@Email", this.email.Text);
 
                 conn.Open();
                 addCreds.ExecuteNonQuery();
+                addInfo.ExecuteNonQuery();
                 conn.Close();
+                this.Validate();
+                this.bindingSource1.EndEdit();
             }
             catch(System.Exception ex)
             {
