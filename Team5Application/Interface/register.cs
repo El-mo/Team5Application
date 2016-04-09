@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Team5Application.Business_Logic;
 
 namespace Team5Application.Interface
 {
     public partial class register : Form
     {
-        public Form1 main;
+        public RegisterController regHelper;
         public register()
         {
             InitializeComponent();
@@ -20,6 +21,21 @@ namespace Team5Application.Interface
 
         private void button1_Click(object sender, EventArgs e)
         {
+            String fname = this.fname.Text;
+            String lname = this.lname.Text;
+            String group = this.group.Text;
+            String street = this.street.Text;
+            //String state = this.
+            String city = this.city.Text;
+            String zip = this.zip.Text;
+            String phone = this.phone.Text;
+            String email = this.email.Text;
+            if (group.Equals("Adult"))
+                regHelper.createMainRegistrant(fname, lname, Data_Models.Registrant.groupType.Adult, street, city, "", zip, phone, email);
+            else
+                regHelper.createMainRegistrant(fname, lname, Data_Models.Registrant.groupType.Professional, street, city, "", zip, phone, email);
+            regHelper.user = new Data_Models.RegistrantUser();
+            
             this.Hide();
             Interface.registrant_info info = new registrant_info();
             info.Show();

@@ -26,7 +26,7 @@ namespace Team5Application.Business_Logic
         }
 
         public Boolean createMainRegistrant (String firstName, String lastName, Registrant.groupType group, String street, String city, 
-            String state, String zip, String phonenum)
+            String state, String zip, String phonenum, String email)
         {
             this.registrant = new Registrant();
 
@@ -40,7 +40,7 @@ namespace Team5Application.Business_Logic
             this.registrant.state = state;
             this.registrant.zip = zip;
             this.registrant.phone = phonenum;
-
+            this.registrant.email = email;
             return true;
         }
 
