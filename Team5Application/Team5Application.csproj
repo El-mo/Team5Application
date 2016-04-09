@@ -51,6 +51,11 @@
     <Compile Include="Data Models\Child.cs" />
     <Compile Include="Data Models\Registrant.cs" />
     <Compile Include="Data Models\RegistrantUser.cs" />
+    <Compile Include="goFlyAKiteDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>goFlyAKiteDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Interface\add_adult.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +113,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="goFlyAKiteDataSet.xsc">
+      <DependentUpon>goFlyAKiteDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="goFlyAKiteDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>goFlyAKiteDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="goFlyAKiteDataSet.xss">
+      <DependentUpon>goFlyAKiteDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -121,7 +137,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="goFlyAKite.accdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <ItemGroup>
     <None Include="Interface\kitesslideshow.gif" />
   </ItemGroup>

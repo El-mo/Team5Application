@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.group = new System.Windows.Forms.ComboBox();
             this.email = new System.Windows.Forms.TextBox();
             this.phone = new System.Windows.Forms.TextBox();
@@ -48,11 +49,24 @@
             this.waivercb = new System.Windows.Forms.CheckBox();
             this.label11 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.goFlyAKiteDataSet1 = new Team5Application.goFlyAKiteDataSet();
+            this.tbPassword = new System.Windows.Forms.TextBox();
+            this.tbUsername = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.tbState = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.goFlyAKiteDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // group
             // 
             this.group.FormattingEnabled = true;
+            this.group.Items.AddRange(new object[] {
+            "Adult",
+            "Professional"});
             this.group.Location = new System.Drawing.Point(84, 271);
             this.group.Name = "group";
             this.group.Size = new System.Drawing.Size(193, 21);
@@ -77,9 +91,9 @@
             // zip
             // 
             this.zip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.zip.Location = new System.Drawing.Point(311, 176);
+            this.zip.Location = new System.Drawing.Point(443, 176);
             this.zip.Name = "zip";
-            this.zip.Size = new System.Drawing.Size(253, 26);
+            this.zip.Size = new System.Drawing.Size(121, 26);
             this.zip.TabIndex = 31;
             // 
             // city
@@ -148,7 +162,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(307, 153);
+            this.label6.Location = new System.Drawing.Point(439, 153);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(31, 20);
             this.label6.TabIndex = 23;
@@ -223,7 +237,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(221, 327);
+            this.button1.Location = new System.Drawing.Point(213, 379);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(142, 44);
             this.button1.TabIndex = 38;
@@ -231,11 +245,82 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // goFlyAKiteDataSet1
+            // 
+            this.goFlyAKiteDataSet1.DataSetName = "goFlyAKiteDataSet";
+            this.goFlyAKiteDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tbPassword
+            // 
+            this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPassword.Location = new System.Drawing.Point(311, 337);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.PasswordChar = '*';
+            this.tbPassword.Size = new System.Drawing.Size(253, 26);
+            this.tbPassword.TabIndex = 42;
+            // 
+            // tbUsername
+            // 
+            this.tbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUsername.Location = new System.Drawing.Point(24, 337);
+            this.tbUsername.Name = "tbUsername";
+            this.tbUsername.Size = new System.Drawing.Size(253, 26);
+            this.tbUsername.TabIndex = 41;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(307, 314);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(78, 20);
+            this.label10.TabIndex = 40;
+            this.label10.Text = "Password";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(20, 314);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(83, 20);
+            this.label12.TabIndex = 39;
+            this.label12.Text = "Username";
+            // 
+            // tbState
+            // 
+            this.tbState.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbState.Location = new System.Drawing.Point(311, 176);
+            this.tbState.Name = "tbState";
+            this.tbState.Size = new System.Drawing.Size(121, 26);
+            this.tbState.TabIndex = 44;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(307, 153);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(48, 20);
+            this.label13.TabIndex = 43;
+            this.label13.Text = "State";
+            // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataSource = this.goFlyAKiteDataSet1;
+            this.bindingSource1.Position = 0;
+            // 
             // register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(585, 392);
+            this.ClientSize = new System.Drawing.Size(585, 435);
+            this.Controls.Add(this.tbState);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.tbPassword);
+            this.Controls.Add(this.tbUsername);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.waivercb);
@@ -262,6 +347,8 @@
             this.Text = "Register";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.register_FormClosed);
             this.Load += new System.EventHandler(this.register_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.goFlyAKiteDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -289,5 +376,13 @@
         private System.Windows.Forms.CheckBox waivercb;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button1;
+        private goFlyAKiteDataSet goFlyAKiteDataSet1;
+        private System.Windows.Forms.TextBox tbPassword;
+        private System.Windows.Forms.TextBox tbUsername;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox tbState;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.BindingSource bindingSource1;
     }
 }
